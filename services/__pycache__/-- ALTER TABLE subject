@@ -1,0 +1,14 @@
+-- ALTER TABLE subject
+-- ADD COLUMN icon TEXT 
+
+-- UPDATE units SET icon = 'Database' WHERE name = 'Database Systems';
+-- UPDATE units SET icon = 'Code' WHERE name = 'Introduction to programming';
+-- UPDATE units SET icon = 'Boxes' WHERE name = 'Object-Oriented Programming';
+-- UPDATE units SET icon = 'GitBranch' WHERE name = 'Data Structures and Algorithms';
+-- UPDATE units SET icon = 'Cpu' WHERE name = 'Operating Systems';
+-- UPDATE units SET icon = 'Brain' WHERE name = 'Artificial Intelligence';
+-- UPDATE units SET icon = 'Sigma' WHERE name = 'Discrete Mathematics';
+-- UPDATE units SET icon = 'CircuitBoard' WHERE name = 'Computer Organization and Architecture I';
+
+SELECT _id,title,description,status,index FROM nodes WHERE unit_id = '3e59f91b-1593-4748-8b98-c4998465c765'
+

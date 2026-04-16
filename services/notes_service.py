@@ -50,11 +50,11 @@ async def upload_notes(
         }
     
     if unit_id:
-        query="INSERT INTO notes (notes_name,notes_for,unit_id,notes_url) VALUES (%s,%s,%s,%s)"
-        params=(file_name,notes_for,unit_id,file_url)
+        query="INSERT INTO resources (name,type,eligible_for,unit_id,url) VALUES (%s,%s,%s,%s)"
+        params=(file_name,'notes',notes_for,unit_id,file_url)
     else:
-        query="INSERT INTO notes (notes_name,notes_for,subject_id,notes_url) VALUES (%s,%s,%s,%s)"
-        params=(file_name,notes_for,subject_id,file_url)
+        query="INSERT INTO resources (name,type,eligible_for,subject_id,url) VALUES (%s,%s,%s,%s)"
+        params=(file_name,'notes',notes_for,subject_id,file_url)
     
     try:
         # get the unit_id pk-to be used as fk

@@ -13,4 +13,4 @@
 -- VALUES ('Database Systems', '40c4584b-56e3-4f4c-98b2-644965fec545') 
 -- RETURNING unit_id;
 
-SELECT * FROM notes
+SELECT * FROM resources

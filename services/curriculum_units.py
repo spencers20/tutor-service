@@ -67,11 +67,13 @@ def create_units(units:unitscreate):
     try:
         unit_name=units.unit_name
         course_id=units.course_id
+        what_to_learn=[]
+        prerequisites=[]
         
         with get_db() as conn:
             with conn.cursor() as cur:
           
-                cur.execute("INSERT INTO units (unit_name, course_id) VALUES (%s,%s) ",(unit_name, course_id))
+                cur.execute("INSERT INTO units (unit_name, course_id,what_to_learn,prerequisites) VALUES (%s,%s) ",(unit_name, course_id,what_to_learn,prerequisites))
                 conn.commit()
 
                 if cur.rowcount>0:
